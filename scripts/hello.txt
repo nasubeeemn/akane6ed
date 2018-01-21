@@ -1,0 +1,102 @@
+'use strict';
+
+function second(){
+  return Math.floor(Math.random() * 3 * 1000);
+}
+
+function delay(msg,text){
+  setTimeout(()=>{
+    msg.send(text);
+  }, second());
+}
+
+module.exports = (robot) => {
+const ganba=`
+がんばって
+でも
+この試験受かったら
+社会人だよ
+`;
+    robot.hear(/つかれた/i, (msg) => {
+//        setTimeout(()=>{ 
+//          msg.send(ganba);
+//         }, second());
+      delay(msg, ganba);
+    });
+    
+const gyu = `
+ぎゅーーーーーーーーー
+ーーーーーーーーーーー
+ーーーーーーーーーーー
+`;
+    robot.hear(/ぎゅってして/i, (msg) => {
+      setTimeout(()=>{
+        msg.send(gyu);
+      }, second());
+    });
+
+  robot.hear(/愛情たっぷり？/i, (msg) => {
+    setTimeout(()=>{
+      msg.send('首絞めすぎた');
+    }, second());
+  });
+
+  robot.hear(/殺す気か！？/i, (msg) => {
+    setTimeout(()=>{
+      msg.send('ウケるー');
+    }, second());
+  });
+
+  var i = 0;
+  robot.hear(/ウケるなよ/i, (msg) => {
+    setTimeout(()=>{
+      if(i==0){
+        msg.send('ちゅ');
+        i++;
+      };
+    }, second());
+  });
+
+  robot.hear(/おや/i, (msg) => {
+    setTimeout(()=>{
+      msg.send('たまにはね');
+    }, second());
+  });
+
+  robot.hear(/会いたくなった。つらい/i, (msg) => {
+    setTimeout(()=>{
+      msg.send('ウケるー');
+    }, second());
+  });
+
+
+
+  robot.hear(/今日/i, (msg) => {
+    setTimeout(()=>{
+      msg.send('今日はありがとう');
+    }, second());
+  });
+
+  robot.hear(/お疲れさま/i, (msg) => {
+    setTimeout(()=>{
+      msg.send('ハネテル君！');
+    }, second());
+  });
+
+  robot.hear(/何それ？/i, (msg) => {
+    setTimeout(()=>{
+      msg.send('あだ名。安曇君の。');
+    }, second());
+  });
+
+const neguse = `
+だって寝ぐせ
+すごいから
+`;
+  robot.hear(/変なあだ名笑/i, (msg) => {
+    setTimeout(()=>{
+      msg.send(neguse);
+    }, second());
+  });
+};
+
