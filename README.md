@@ -1,16 +1,17 @@
 # akane6ed
 
-TVアニメ「月がきれい」第６話のエンディングに流れるLINEの会話を模したSlack Botです。
-Botが茜役です。
+TVアニメ「月がきれい」第６話のエンディングに流れるLINEの会話を模したSlack Botです。  
+Botが茜役です。  
+Node.js v6.10.0にて動作検証
 
 * SlackにWorkspaceを作ります。
 * WorkspaceにHubotを設置して、HUBOT_SLACK_TOKEN を取得します。
 * チャンネルを作り、Hubotをチャンネルに参加させます。
 
-以下、ローカルで
+以下、コンソールで
 * npm install
 * env HUBOT_SLACK_TOKEN=xoxb-16455131522-XXXXXXXXXXXXXXXXXXXX bin/hubot --adapter slack
-* （上記にてSLACK_TOKENをセットします）
+* （上記にてSLACK_TOKENをセットします）  
 でHubotに接続できます。
 
 会話は「つかれた」と送信することから始まります。
